@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Level Proofs</title>
+<style>
+body{
+    background:#111;
+    color:white;
+    font-family:Arial;
+    padding:20px;
+}
+
+.card{
+    background:#222;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+video{
+    width:100%;
+    max-width:800px;
+    border-radius:10px;
+}
+</style>
+</head>
+<body>
+
+<h1>My Geometry Dash Completions</h1>
+
+<div id="levels"></div>
+
+<script>
+
+// ==================
+// EDIT LEVELS HERE
+// ==================
+
+const levels = [
+
+{
+    title: "C - The Top 1",
+    description: "Verified ✅ After 1.2k attempts.",
+    video: "h.mp4"
+}
+
+];
+
+// ==================
+// WEBSITE CODE
+// ==================
+
+const container = document.getElementById("levels");
+
+levels.forEach(level => {
+
+    container.innerHTML += `
+        <div class="card">
+            <h2>${level.title}</h2>
+            <p>${level.description}</p>
+
+            <video controls>
+                <source src="${level.video}" type="video/mp4">
+            </video>
+        </div>
+    `;
+});
+
+</script>
+
+</body>
+</html>
